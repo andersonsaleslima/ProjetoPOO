@@ -1,7 +1,7 @@
 package exer1;
 
 /**
- * @author Fabiano S. Ferreira
+ * @author Fabiano S. Ferreira  2
  * 
  */
 import java.util.Scanner;
