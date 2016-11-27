@@ -21,8 +21,12 @@ public class ColecaoPacientes {
 	 */
 	public void adicionarPaciente(Paciente p){
 
-		listaPacientes.add(p);
-
+		if(!listaPacientes.contains(p)){
+			listaPacientes.add(p);
+			System.out.println("Paciente adicionado.");
+	    }else{
+	        System.out.println( "Este Paciente já foi adicionado");
+	    }
 	}
 
 	public void pesquisaPeloDocumento(String documento){
@@ -99,7 +103,7 @@ public class ColecaoPacientes {
 
 				System.out.println("Paciente com mais de 60 Anos: "+paciente.toString());
 			}else
-				System.out.println("N�o h� pacientes com mais de 60 anos");
+				System.out.println("Não há pacientes com mais de 60 anos");
 		}
 	}
 

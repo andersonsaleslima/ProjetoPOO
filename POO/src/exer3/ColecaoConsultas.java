@@ -23,8 +23,14 @@ public class ColecaoConsultas {
 	}
 
 	public void adicionaConsulta(Consulta consulta){
+		if(!listaConsultas.contains(consulta)){
+			listaConsultas.add(consulta);
+			System.out.println("Consulta adicionada.");
+	    }else{
+	        System.out.println( "Esta consulta já foi adicionada");
+	    }
 
-		listaConsultas.add(consulta);
+		
 	}
 
 	public void qtdConsultasData(LocalDate data){
@@ -49,39 +55,35 @@ public class ColecaoConsultas {
 
 	}
 
-	public void qtdConsultasPorMedico(){
-		@SuppressWarnings("unused")
+	public void qtdConsultasPorMedico(String nome, String crm){
+
 		int cont=0;
-		for(int i=0; i<listaConsultas.size();i++){
-
-			for(int j=0; j<listaConsultas.size();j++){
-
-				if (listaConsultas.get(i).getMedico().equals(listaConsultas.get(j).getMedico())){
-					cont++;
-
-				}
-				
-
-			}
-			cont=0;
+		
+		for (Consulta consulta : listaConsultas) {
+			if (consulta.getMedico().getNome().equalsIgnoreCase(nome)&&consulta.getMedico().getCrm().equalsIgnoreCase(crm))
+				cont++;
 		}
+		
+		System.out.println("O Médico: "+nome+" Fez: "+cont+" Consultas");
+		
 
 	}
 
-	public void listaConsultasPorPaciente(){
-
-		for(int i=0; i<listaConsultas.size();i++){
-
-			for(int j=0; j<listaConsultas.size();j++){
-
-				if (listaConsultas.get(i).getPaciente().equals(listaConsultas.get(j).getPaciente())){
-
-					System.out.println(listaConsultas.get(j).getPaciente()+"\n");
-				}
-
-			}
+	public void listaConsultasPorPaciente(String nome, String documento){
+		
+	int cont=0;
+		
+		for (Consulta consulta : listaConsultas) {
+			if (consulta.getPaciente().getNome().equalsIgnoreCase(nome)&&consulta.getPaciente().getDocumento().equalsIgnoreCase(documento))
+				cont++;
 		}
+		
+		System.out.println("O Paciente: "+nome+" Fez: "+cont+" Consultas");
+		
+
 	}
 
-}
+	}
+
+
 

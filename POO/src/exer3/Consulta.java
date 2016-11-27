@@ -17,26 +17,30 @@ public class Consulta {
 	
 	
 	
+	/**
+	 * @param paciente
+	 * @param medico
+	 * @param data
+	 * @param hora
+	 */
+	public Consulta(Paciente paciente, Medico medico, LocalDate data, LocalTime hora) {
+		super();
+		this.paciente = paciente;
+		this.medico = medico;
+		this.data = data;
+		this.hora = hora;
+	}
+
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Consulta [paciente=" + paciente.toString() + ", medico=" + medico + ", data=" + data + ", hora=" + hora.toString().substring(0, 8) + "]\n";
+		return "Consulta [paciente=" + paciente + ", medico=" + medico + ", data=" + data + ", hora=" + hora.toString().substring(0, 8) + "]\n";
 	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((data == null) ? 0 : data.hashCode());
-		result = prime * result + ((hora == null) ? 0 : hora.hashCode());
-		result = prime * result + ((medico == null) ? 0 : medico.hashCode());
-		result = prime * result + ((paciente == null) ? 0 : paciente.hashCode());
-		return result;
-	}
+
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
@@ -77,48 +81,31 @@ public class Consulta {
 	public Paciente getPaciente() {
 		return paciente;
 	}
-	/**
-	 * @param paciente the paciente to set
-	 */
-	public void setPaciente(Paciente paciente) {
-		this.paciente = paciente;
-	}
+
+
 	/**
 	 * @return the medico
 	 */
 	public Medico getMedico() {
 		return medico;
 	}
-	/**
-	 * @param medico the medico to set
-	 */
-	public void setMedico(Medico medico) {
-		this.medico = medico;
-	}
+
+
 	/**
 	 * @return the data
 	 */
 	public LocalDate getData() {
 		return data;
 	}
-	/**
-	 * @param data the data to set
-	 */
-	public void setData(LocalDate data) {
-		this.data = data;
-	}
+
+
 	/**
 	 * @return the hora
 	 */
 	public LocalTime getHora() {
 		return hora;
 	}
-	/**
-	 * @param hora the hora to set
-	 */
-	public void setHora(LocalTime hora) {
-		this.hora = hora;
-	}
+	
 	
 	
 
