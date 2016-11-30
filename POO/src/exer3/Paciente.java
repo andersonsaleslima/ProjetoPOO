@@ -4,17 +4,6 @@ import java.time.Period;
 
 public class Paciente {
 
-
-
-	private String nome;
-	private LocalDate dataNasc;
-	private String documento;
-	private Endereco endereco;
-	private String sexo;
-
-
-
-
 	/**
 	 * @param endereco
 	 * @param sexo
@@ -23,6 +12,19 @@ public class Paciente {
 	 * @param documento
 	 */
 
+	private String nome;
+	private LocalDate dataNasc;
+	private String documento;
+	private Endereco endereco;
+	private String sexo;
+
+
+	/**
+	 * Construtor sem parametros que inicializa os atributos 
+	 * 
+	 * 
+	 * 
+	 */
 	public Paciente() {
 		this.endereco = null;
 		this.sexo = "";
@@ -31,6 +33,17 @@ public class Paciente {
 		this.documento = "";
 	}
 
+	
+	/**
+	 * 
+	 * Construtor com parametros que será utlizados para alterar o valor inicial dos atributos
+	 * 
+	 * @param endereco
+	 * @param sexo
+	 * @param nome
+	 * @param data
+	 * @param documento
+	 */
 	public Paciente(Endereco endereco, String sexo, String nome, LocalDate data, String documento) {
 		this.endereco = endereco;
 		this.sexo = sexo;
@@ -40,6 +53,12 @@ public class Paciente {
 	}
 
 
+	
+	/**
+	 * Método que pega o nome de um paciente e o coloca no formato nome final mais iniciais.
+	 * 
+	 * @return uma string formatada
+	 */
 	public String nomeFormatado(){
 
 		String[] parts = this.nome.split(" ");
@@ -57,7 +76,12 @@ public class Paciente {
 	}
 
 
-
+/**
+ * Método que pega a data de nascimento do paciente faz um cálculo utilizando a data atual 
+ * e retorna a idade do paciente em anos
+ * 
+ * @return
+ */
 	public int idade(){
 
 
@@ -108,7 +132,7 @@ public class Paciente {
 	}
 	@Override
 	public String toString() {
-		return "Paciente [endereco=" + endereco.toString() + ", sexo=" + sexo + ", nome=" + nome + ", data=" + dataNasc
+		return "Paciente [endereco=" + endereco.toString() + ", sexo=" + sexo + ", nome=" + nomeFormatado() + ", data=" + dataNasc
 				+ ", documento=" + documento + "]\n";
 	}
 

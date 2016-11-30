@@ -38,6 +38,10 @@ public class Principal {
 				menu2();
 
 				switch (lerInt(sc)) {
+				case 0:
+					System.out.println("Voltando..");
+					op=1;
+					break;
 				case 1:
 					System.out.println("Digite o nome do paciente");
 					String nome=lerString(sc);
@@ -94,19 +98,23 @@ public class Principal {
 					System.out.println("Digite a data");
 					lisConsultas.qtdConsultasData(getData());
 					break;
+				default:
+					System.err.println("Digite uma Opção válida");
+					break;
+				
 				}
 
 				break;
 
 
 			default:
-				System.err.println("Digite uma Op��o valida");
+				System.err.println("Digite uma Opção válida");
 				break;
 			}
 
 
 
-		} while (op !=12);
+		} while (op !=0);
 
 		System.out.println("Saiu");
 	}
@@ -116,11 +124,11 @@ public class Principal {
 	public static void menu(){
 		System.out.println(" ____________________________");
 		System.out.println("|                            |");
-		System.out.println("|   DIGITE UMA DAS OP��ES :  |");
+		System.out.println("|   DIGITE UMA DAS OPÇÕES :  |");
 		System.out.println("|                            |"
 				+ "\n|   1- Cadastar Consulta     |"
 				+ "\n|                            |"
-				+ "\n|   2- Listar Informa��es    |"
+				+ "\n|   2- Listar Informações    |"
 				+ "\n|                            |"
 				+ "\n|   0- Sair                  |");
 		System.out.println("|____________________________|");
@@ -131,7 +139,7 @@ public class Principal {
 		System.out.println("____________________________"
 				+"_______________________________________________________________");
 		System.out.println("|                                                                                          |");
-		System.out.println("|                                   DIGITE UMA DAS OP��ES:                                 |");
+		System.out.println("|                                   DIGITE UMA DAS OPÇÕES:                                 |");
 		System.out.println("|__________________________________________________________________________________________|"
 				+ "\n|   1- Listar de Consultas Por Parciente    "
 				+ "| 2-Listar de Consultas                        |"
@@ -145,10 +153,12 @@ public class Principal {
 				+ "\n|   7- Quantidade de pacientes por sexo     |"
 				+ " 8- Listar pacientes com endere�o             |"
 				+ "\n|                                           |"
-				+ "\n|   9- Pesquisar m�dico por parte do nome   |" 
+				+ "\n|   9- Pesquisar médico por parte do nome   |" 
 				+ " 10- Listar Médico pelo CRM                   |"
-				+ "\n|   0- Sair                                 |"
-				+ "                                              |"
+				+ "\n|                                           |"
+				+ "\n|   11-Listar Consulta por Data             "
+				+ "| 0- Voltar                                    "
+				+ "|                                              |"
 				+"\n|___________________________________________|"
 				+"______________________________________________|");
 
@@ -159,7 +169,7 @@ public class Principal {
 	}
 
 	public static String lerString(Scanner in){
-		System.out.print("Digite novamente (m�nimo de 3 caracteres): ");
+		System.out.print("Digite novamente (mínimo de 3 caracteres): ");
 		String r;
 		do{
 			r = in.nextLine();
@@ -170,7 +180,13 @@ public class Principal {
 		return r;
 
 	}
-
+/**
+ * 
+ * Método que garante que seja digitado um inteiro
+ * 
+ * @param sc
+ * @return
+ */
 	public static int lerInt(Scanner sc){
 		int r=0;
 		System.out.println("Digite um Numero");
@@ -178,7 +194,7 @@ public class Principal {
 		do{
 			while(!sc.hasNextInt()){
 				sc.nextLine();
-				System.out.println("Tipo de dado inv�lido. Digite um inteiro: ");
+				System.out.println("Tipo de dado inválido. Digite um inteiro: ");
 			}
 			r = sc.nextInt();
 			sc.nextLine();
@@ -187,7 +203,13 @@ public class Principal {
 
 		return r;
 	}
-
+/**
+ * Método que garante que será digitado neste formato
+ * 
+ * 
+ * @param in
+ * @return
+ */
 	public static String lerData(Scanner in){
 		System.out.print("Digite no formato (dd/mm/aaaa) ");
 		String r;
@@ -200,7 +222,10 @@ public class Principal {
 		return r;
 
 	}
-
+/**
+ * Método que realiza os cadastros necessários
+ * 
+ */
 	public static void cadastraConsulta(){
 
 
@@ -249,17 +274,17 @@ public class Principal {
 		cons    =new Consulta(paciente,med,LocalDate.now(),LocalTime.now());
 
 
-		//System.out.println("Digite a data da Consulta ");
-
-		//cons.setData(getData());
-
 		lisMedicos.adicionaMedico(med);
 		lisPaciente.adicionarPaciente(paciente);
 		lisConsultas.adicionaConsulta(cons);
 
 
 	}
-
+/**
+ * Método que retorna uma data formatada
+ * 
+ * @return
+ */
 	static LocalDate getData(){
 
 		DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");

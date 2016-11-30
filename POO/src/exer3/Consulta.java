@@ -5,6 +5,11 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Consulta {
+	
+	/**
+	 * 
+	 * 
+	 */
 	private Paciente paciente;
 	private Medico medico;
 	private LocalDate data;
@@ -12,12 +17,8 @@ public class Consulta {
 	
 	
 	
-	
-	
-	
-	
-	
 	/**
+	 * Construtor que recebe como parametro todos os atributos da classe
 	 * @param paciente
 	 * @param medico
 	 * @param data
@@ -34,6 +35,9 @@ public class Consulta {
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
+	 */
+	/**
+	 * método toString que permite o objeto Enderço seja mostrado na tela 
 	 */
 	@Override
 	public String toString() {

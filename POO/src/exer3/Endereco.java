@@ -1,13 +1,21 @@
 package exer3;
 
 public class Endereco {
+	/**
+	 * 
+	 * 
+	 */
+	
 	
 	private String cep;
 	private String rua;
 	private String bairro;
 	private String complemento;
 	
-	
+	/**
+	 * Construtor sem parametro  que inicia os atributos
+	 * 
+	 */
 	public Endereco() {
 		this.cep = "";
 		this.rua = "";
@@ -16,7 +24,14 @@ public class Endereco {
 	}
 	
 	
-	
+	/**
+	 * Construtor com parametro  que inicia os atributos
+	 * 
+	 * @param cep
+	 * @param rua
+	 * @param bairro
+	 * @param complemento
+	 */
 	public Endereco(String cep, String rua, String bairro, String complemento) {
 		super();
 		this.cep = cep;
@@ -25,16 +40,7 @@ public class Endereco {
 		this.complemento = complemento;
 	}
 	
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((cep == null) ? 0 : cep.hashCode());
-		result = prime * result + ((bairro == null) ? 0 : bairro.hashCode());
-		result = prime * result + ((complemento == null) ? 0 : complemento.hashCode());
-		result = prime * result + ((rua == null) ? 0 : rua.hashCode());
-		return result;
-	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -66,6 +72,9 @@ public class Endereco {
 			return false;
 		return true;
 	}
+	/**
+	 * método toString que permite o objeto Enderço seja mostrado na tela 
+	 */
 	@Override
 	public String toString() {
 		return "Endereco [CEP=" + cep + ", rua=" + rua + ", bairro=" + bairro + ", complemento=" + complemento + "]\n";

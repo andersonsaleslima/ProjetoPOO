@@ -19,6 +19,11 @@ public class ColecaoPacientes {
 		this.listaPacientes = listaPacientes;
 	}
 	 */
+	/**
+	 * Método que recebe como paramentro um paciente verifica se o mesmo já existe na lista se não
+	 * existir, será adcionado.
+	 * @param p
+	 */
 	public void adicionarPaciente(Paciente p){
 
 		if(!listaPacientes.contains(p)){
@@ -29,6 +34,10 @@ public class ColecaoPacientes {
 	    }
 	}
 
+	/**
+	 * Método que pesquisa um paciente de acordo com o documento passado como paramentro
+	 * @param documento
+	 */
 	public void pesquisaPeloDocumento(String documento){
 
 		for (Paciente paciente : listaPacientes) {
@@ -41,7 +50,13 @@ public class ColecaoPacientes {
 		}
 	}
 
-
+	
+/**
+ * 
+ * Método que remove um paciente de acordo com o documento passado como parametro
+ * 
+ * @param documento
+ */
 	public void removePeloDocumento(String documento){
 
 		for (Paciente paciente : listaPacientes) {
@@ -61,6 +76,12 @@ public class ColecaoPacientes {
 
 	}
 
+	
+	/**
+	 * 
+	 * Método que faz lista quantidade de pessoas de acordo com sexo
+	 * 
+	 */
 	public void qtdPacientesPorSexo(){
 		int masc=0;
 		int fem=0;
@@ -80,6 +101,10 @@ public class ColecaoPacientes {
 
 	}
 
+	
+	/**
+	 * Método que lista os pacientes que tem endereço
+	 */
 
 	public void listagemPacientesComEndereco(){
 
@@ -94,6 +119,13 @@ public class ColecaoPacientes {
 
 
 	}
+	
+	/**
+	 * Lista os pacientes que tem mais 60 anos
+	 * o método compara a idade de cada paciente 
+	 * 
+	 * 
+	 */
 
 	public void listagemDePacientesMaioresDe60anos(){
 
