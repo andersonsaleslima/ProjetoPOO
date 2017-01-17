@@ -23,7 +23,7 @@ public class Principal {
 
 
 
-		int op = 0;
+		int op = 100;
 		do { 
 
 			menu();
@@ -47,7 +47,7 @@ public class Principal {
 					String nome=lerString(sc);
 					System.out.println("Digite o documento do paciente");
 					String documento=lerString(sc);
-					
+
 					lisConsultas.listaConsultasPorPaciente(nome,documento);
 					break;
 				case 2:
@@ -101,7 +101,7 @@ public class Principal {
 				default:
 					System.err.println("Digite uma Opção válida");
 					break;
-				
+
 				}
 
 				break;
@@ -174,19 +174,19 @@ public class Principal {
 		do{
 			r = in.nextLine();
 			if(r.length()<3){
-				System.out.print("O nome deve ter, no m�nimo, 3 caracteres. Digite novamente: ");
+				System.out.print("O nome deve ter, no mínimo, 3 caracteres. Digite novamente: ");
 			}
 		}while(r.length()<3);
 		return r;
 
 	}
-/**
- * 
- * Método que garante que seja digitado um inteiro
- * 
- * @param sc
- * @return
- */
+	/**
+	 * 
+	 * Método que garante que seja digitado um inteiro
+	 * 
+	 * @param sc
+	 * @return
+	 */
 	public static int lerInt(Scanner sc){
 		int r=0;
 		System.out.println("Digite um Numero");
@@ -203,13 +203,13 @@ public class Principal {
 
 		return r;
 	}
-/**
- * Método que garante que será digitado neste formato
- * 
- * 
- * @param in
- * @return
- */
+	/**
+	 * Método que garante que será digitado neste formato
+	 * 
+	 * 
+	 * @param in
+	 * @return
+	 */
 	public static String lerData(Scanner in){
 		System.out.print("Digite no formato (dd/mm/aaaa) ");
 		String r;
@@ -222,10 +222,10 @@ public class Principal {
 		return r;
 
 	}
-/**
- * Método que realiza os cadastros necessários
- * 
- */
+	/**
+	 * Método que realiza os cadastros necessários
+	 * 
+	 */
 	public static void cadastraConsulta(){
 
 
@@ -256,7 +256,7 @@ public class Principal {
 		String complemento=lerString(sc);
 
 
-		
+
 
 		System.out.println("Digite Nome do medico: ");
 		String nomeM=lerString(sc);
@@ -266,8 +266,8 @@ public class Principal {
 
 		System.out.println("Digite Especialidade do medico: ");
 		String especialidade=lerString(sc);
-		
-		
+
+
 		end     =new Endereco(cep,rua,bairro,complemento);
 		paciente=new Paciente(end,sexo,nome,data,documento);
 		med     =new Medico(crm,nomeM,especialidade);	
@@ -280,11 +280,11 @@ public class Principal {
 
 
 	}
-/**
- * Método que retorna uma data formatada
- * 
- * @return
- */
+	/**
+	 * Método que retorna uma data formatada
+	 * 
+	 * @return
+	 */
 	static LocalDate getData(){
 
 		DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");

@@ -12,11 +12,11 @@ public class Paciente {
 	 * @param documento
 	 */
 
-	private String nome;
+	private String    nome;
 	private LocalDate dataNasc;
-	private String documento;
-	private Endereco endereco;
-	private String sexo;
+	private String    documento;
+	private Endereco  endereco;
+	private String    sexo;
 
 
 	/**
@@ -33,7 +33,7 @@ public class Paciente {
 		this.documento = "";
 	}
 
-	
+
 	/**
 	 * 
 	 * Construtor com parametros que será utlizados para alterar o valor inicial dos atributos
@@ -53,7 +53,7 @@ public class Paciente {
 	}
 
 
-	
+
 	/**
 	 * Método que pega o nome de um paciente e o coloca no formato nome final mais iniciais.
 	 * 
@@ -76,12 +76,12 @@ public class Paciente {
 	}
 
 
-/**
- * Método que pega a data de nascimento do paciente faz um cálculo utilizando a data atual 
- * e retorna a idade do paciente em anos
- * 
- * @return
- */
+	/**
+	 * Método que pega a data de nascimento do paciente faz um cálculo utilizando a data atual 
+	 * e retorna a idade do paciente em anos
+	 * 
+	 * @return
+	 */
 	public int idade(){
 
 
