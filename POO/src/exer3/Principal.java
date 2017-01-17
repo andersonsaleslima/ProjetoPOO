@@ -43,7 +43,8 @@ public class Principal {
 					op=1;
 					break;
 				case 1:
-					System.out.println("Digite o nome do paciente");
+					System.out.println("Pesquisando Paciente");
+					System.out.println("Digite o nome do paciente ");
 					String nome=lerString(sc);
 					System.out.println("Digite o documento do paciente");
 					String documento=lerString(sc);
@@ -151,7 +152,7 @@ public class Principal {
 				+ " 6-Remover pelo documento                     |"
 				+ "\n|                                           |"
 				+ "\n|   7- Quantidade de pacientes por sexo     |"
-				+ " 8- Listar pacientes com endere�o             |"
+				+ " 8- Listar pacientes com endereço             |"
 				+ "\n|                                           |"
 				+ "\n|   9- Pesquisar médico por parte do nome   |" 
 				+ " 10- Listar Médico pelo CRM                   |"
