@@ -55,9 +55,9 @@ public class Principal {
 					lisConsultas.listagemConsultas();
 					break;
 				case 3:
-					System.out.println("Digite o nome do M√©dico");
+					System.out.println("Digite o nome do MÈdico");
 					String nomeM=lerString(sc);
-					System.out.println("Digite o crm do M√©dico");
+					System.out.println("Digite o crm do MÈdico");
 					String crm=lerString(sc);
 					lisConsultas.qtdConsultasPorMedico(nomeM,crm);
 
@@ -91,7 +91,7 @@ public class Principal {
 					break;
 
 				case 10:
-					System.out.println("Ditgite o CRM do m√©dico");
+					System.out.println("Ditgite o CRM do mÈdico");
 					lisMedicos.pesquisaPeloCRM(lerString(sc));
 					break;
 
@@ -100,7 +100,7 @@ public class Principal {
 					lisConsultas.qtdConsultasData(getData());
 					break;
 				default:
-					System.err.println("Digite uma Op√ß√£o v√°lida");
+					System.err.println("Digite uma OpÁ„o v·lida");
 					break;
 
 				}
@@ -109,7 +109,7 @@ public class Principal {
 
 
 			default:
-				System.err.println("Digite uma Op√ß√£o v√°lida");
+				System.err.println("Digite uma Op„o v·lida");
 				break;
 			}
 
@@ -125,11 +125,11 @@ public class Principal {
 	public static void menu(){
 		System.out.println(" ____________________________");
 		System.out.println("|                            |");
-		System.out.println("|   DIGITE UMA DAS OP√á√ïES :  |");
+		System.out.println("|   DIGITE UMA DAS OP«’ïES :  |");
 		System.out.println("|                            |"
 				+ "\n|   1- Cadastar Consulta     |"
 				+ "\n|                            |"
-				+ "\n|   2- Listar Informa√ß√µes    |"
+				+ "\n|   2- Listar InformaÁıes    |"
 				+ "\n|                            |"
 				+ "\n|   0- Sair                  |");
 		System.out.println("|____________________________|");
@@ -140,7 +140,7 @@ public class Principal {
 		System.out.println("____________________________"
 				+"_______________________________________________________________");
 		System.out.println("|                                                                                          |");
-		System.out.println("|                                   DIGITE UMA DAS OP√á√ïES:                                 |");
+		System.out.println("|                                   DIGITE UMA DAS OP«’ES:                                 |");
 		System.out.println("|__________________________________________________________________________________________|"
 				+ "\n|   1- Listar de Consultas Por Parciente    "
 				+ "| 2-Listar de Consultas                        |"
@@ -152,10 +152,10 @@ public class Principal {
 				+ " 6-Remover pelo documento                     |"
 				+ "\n|                                           |"
 				+ "\n|   7- Quantidade de pacientes por sexo     |"
-				+ " 8- Listar pacientes com endere√ßo             |"
+				+ " 8- Listar pacientes com endereÁo             |"
 				+ "\n|                                           |"
-				+ "\n|   9- Pesquisar m√©dico por parte do nome   |" 
-				+ " 10- Listar M√©dico pelo CRM                   |"
+				+ "\n|   9- Pesquisar mÈdico por parte do nome   |" 
+				+ " 10- Listar MÈdico pelo CRM                   |"
 				+ "\n|                                           |"
 				+ "\n|   11-Listar Consulta por Data             "
 				+ "| 0- Voltar                                    "
@@ -170,7 +170,7 @@ public class Principal {
 	}
 
 	public static String lerString(Scanner in){
-		System.out.print("Digite novamente (m√≠nimo de 3 caracteres): ");
+		System.out.print("Digite novamente (mÌnimo de 3 caracteres): ");
 		String r;
 		do{
 			r = in.nextLine();
@@ -183,10 +183,10 @@ public class Principal {
 	}
 	/**
 	 * 
-	 * M√©todo que garante que seja digitado um inteiro
+	 * MÈtodo que garante que seja digitado um inteiro
 	 * 
-	 * @param sc
-	 * @return
+	 * @param sc recebe um inteiro como parametro
+	 * @return um inteiro
 	 */
 	public static int lerInt(Scanner sc){
 		int r=0;
@@ -195,7 +195,7 @@ public class Principal {
 		do{
 			while(!sc.hasNextInt()){
 				sc.nextLine();
-				System.out.println("Tipo de dado inv√°lido. Digite um inteiro: ");
+				System.out.println("Tipo de dado inv·lido. Digite um inteiro: ");
 			}
 			r = sc.nextInt();
 			sc.nextLine();
@@ -205,11 +205,9 @@ public class Principal {
 		return r;
 	}
 	/**
-	 * M√©todo que garante que ser√° digitado neste formato
 	 * 
-	 * 
-	 * @param in
-	 * @return
+	 * @param in recebe uma string como parametro
+	 * @return uma string que representa uma data
 	 */
 	public static String lerData(Scanner in){
 		System.out.print("Digite no formato (dd/mm/aaaa) ");
@@ -217,14 +215,14 @@ public class Principal {
 		do{
 			r = in.nextLine();
 			if(r.length()!=10){
-				System.out.print("Formato inv√°lido digite: dd/mm/aaaa");
+				System.out.print("Formato inv·lido digite: dd/mm/aaaa");
 			}
 		}while(r.length()!=10);
 		return r;
 
 	}
 	/**
-	 * M√©todo que realiza os cadastros necess√°rios
+	 * MÈtodo que realiza os cadastros necess·rios(Consultas, pacientes e medicos)
 	 * 
 	 */
 	public static void cadastraConsulta(){
@@ -282,9 +280,9 @@ public class Principal {
 
 	}
 	/**
-	 * M√©todo que retorna uma data formatada
+	 * MÈtodo que retorna uma data formatada
 	 * 
-	 * @return
+	 * @return uma data no formato dd/mm/yyyy
 	 */
 	static LocalDate getData(){
 

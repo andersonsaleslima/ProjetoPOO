@@ -20,9 +20,9 @@ public class ColecaoPacientes {
 	}
 	 */
 	/**
-	 * M√©todo que recebe como paramentro um paciente verifica se o mesmo j√° existe na lista se n√£o
-	 * existir, ser√° adcionado.
-	 * @param p
+	 * MÈtodo que recebe como paramentro um paciente verifica se o mesmo j· existe na lista se n„o
+	 * existir, ser· adcionado.
+	 * @param p representa um paciente 
 	 */
 	public void adicionarPaciente(Paciente p){
 
@@ -30,13 +30,13 @@ public class ColecaoPacientes {
 			listaPacientes.add(p);
 			System.out.println("Paciente adicionado.");
 	    }else{
-	        System.out.println( "Este Paciente j√° foi adicionado");
+	        System.out.println( "Este Paciente j· foi adicionado");
 	    }
 	}
 
 	/**
-	 * M√©todo que pesquisa um paciente de acordo com o documento passado como paramentro
-	 * @param documento
+	 * M·todo que pesquisa um paciente de acordo com o documento passado como paramentro
+	 * @param documento repesenta um documento de um paciente
 	 */
 	public void pesquisaPeloDocumento(String documento){
 
@@ -46,16 +46,16 @@ public class ColecaoPacientes {
 
 				System.out.println(paciente.toString());
 			else
-				System.out.println("NÔøΩo existe Documento");
+				System.out.println("N„o existe Documento");
 		}
 	}
 
 	
 /**
  * 
- * M√©todo que remove um paciente de acordo com o documento passado como parametro
+ * MÈtodo que remove um paciente de acordo com o documento passado como parametro
  * 
- * @param documento
+ * @param documento representa o documento do paciente
  */
 	public void removePeloDocumento(String documento){
 
@@ -68,7 +68,7 @@ public class ColecaoPacientes {
 
 			}
 			else{
-				System.out.println("NÔøΩo foi encontrado paciente");
+				System.out.println("N„o foi encontrado paciente");
 			}
 
 		}
@@ -79,7 +79,7 @@ public class ColecaoPacientes {
 	
 	/**
 	 * 
-	 * M√©todo que faz lista quantidade de pessoas de acordo com sexo
+	 * MÈtodo que faz lista quantidade de pessoas de acordo com sexo
 	 * 
 	 */
 	public void qtdPacientesPorSexo(){
@@ -103,7 +103,7 @@ public class ColecaoPacientes {
 
 	
 	/**
-	 * M√©todo que lista os pacientes que tem endere√ßo
+	 * MÈtodo que lista os pacientes que tem endereÁo
 	 */
 
 	public void listagemPacientesComEndereco(){
@@ -122,7 +122,7 @@ public class ColecaoPacientes {
 	
 	/**
 	 * Lista os pacientes que tem mais 60 anos
-	 * o m√©todo compara a idade de cada paciente 
+	 * o mÈtodo compara a idade de cada paciente 
 	 * 
 	 * 
 	 */
@@ -135,7 +135,7 @@ public class ColecaoPacientes {
 
 				System.out.println("Paciente com mais de 60 Anos: "+paciente.toString());
 			}else
-				System.out.println("N√£o h√° pacientes com mais de 60 anos");
+				System.out.println("N„o h· pacientes com mais de 60 anos");
 		}
 	}
 

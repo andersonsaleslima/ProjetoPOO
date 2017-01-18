@@ -5,15 +5,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ColecaoConsultas {
-
+	/**
+	 * @param listaConsultas representa uma lista de consultas
+	 */
 	private ArrayList<Consulta> listaConsultas;
 
 
-
-
-	/**
-	 * @param listaConsultas
-	 */
+	
 	public ColecaoConsultas() {
 		listaConsultas=new ArrayList<Consulta>();
 	}
@@ -23,7 +21,7 @@ public class ColecaoConsultas {
 	 * Construtor que inicializa a lista de consultas ele recebe uma lista como parametro
 	 * 
 	 * 
-	 * @param listaConsultas
+	 * @param listaConsultas representa uma lista de consultas
 	 */
 	public ColecaoConsultas(ArrayList<Consulta> listaConsultas) {
 		this.listaConsultas = listaConsultas;
@@ -31,25 +29,25 @@ public class ColecaoConsultas {
 
 	
 	/**
-	 * M√©todo que cadastra uma consulta, mas primeiro verifica se ja existe uma cadastrada
+	 * MÈtodo que cadastra uma consulta, mas primeiro verifica se ja existe uma cadastrada
 	 * 
-	 * @param consulta
+	 * @param consulta recebe uma consulta como parametro
 	 */
 	public void adicionaConsulta(Consulta consulta){
 		if(!listaConsultas.contains(consulta)){
 			listaConsultas.add(consulta);
 			System.out.println("Consulta adicionada.");
 		}else{
-			System.out.println( "Esta consulta j√° foi adicionada");
+			System.out.println( "Esta consulta j· foi adicionada");
 		}
 
 
 	}
 
 	/**
-	 * M√©todo que lista consultas a partir de uma data passada por parametro
+	 * MÈtodo que lista consultas a partir de uma data passada por parametro
 	 * 
-	 * @param data
+	 * @param data recebe uma data como paramentro e mostra quanstas consultas foram feitas na data
 	 */
 	public void qtdConsultasData(LocalDate data){
 		int cont=0;
@@ -64,7 +62,7 @@ public class ColecaoConsultas {
 	
 	/**
 	 * 
-	 * M√©todo que mostra todas as consultas cadastradas
+	 * MÈtodo que mostra todas as consultas cadastradas
 	 * 
 	 * 
 	 * 
@@ -82,10 +80,12 @@ public class ColecaoConsultas {
 	}
 
 	/***
-	 * M√©todo lista as consultas por m√©dicos de acordo com o nome e crm do pra
+	 * MÈtodo lista as consultas por mÈdicos de acordo com o nome e crm do pra
 	 * se for igual
-	 * @param nome
-	 * @param crm
+	 * @param nome recebe um nome como parametro
+	 * @param crm  recebe o crm  como parametro
+	 * 
+	 * 
 	 */
 
 	public void qtdConsultasPorMedico(String nome, String crm){
@@ -102,10 +102,10 @@ public class ColecaoConsultas {
 
 	}
 	/**
-	 * M√©todo lista as consultas pelo paciente, ser√° passado o nome e o documento
+	 * MÈtodo lista as consultas pelo paciente, ser· passado o nome e o documento como parametro
 	 * 
-	 * @param nome
-	 * @param documento
+	 * @param nome representa o nome do paciente
+	 * @param documento representa o documento do paciente 
 	 */
 	public void listaConsultasPorPaciente(String nome, String documento){
 

@@ -1,27 +1,30 @@
 package exer3;
 
 public class Medico {
+
+	/**
+	 * @param crm  do médico
+	 * @param nome do médico
+	 * @param especialidade do médico
+	 */
 	
 	private String crm;
 	private String nome;
 	private String especialidade;
-		
+
+
+
 	
-	
-	/**
-	 * @param crm
-	 * @param nome
-	 * @param especialidade
-	 */
 	public Medico() {
 		this.crm = "";
 		this.nome = "";
 		this.especialidade = "";
 	}
+	
 	/**
-	 * @param crm
-	 * @param nome
-	 * @param especialidade
+	 *@param crm representa o crm do medico
+	 * @param nome representa o nome do médico
+	 * @param especialidade representa a especialidade do médico
 	 */
 	public Medico(String crm, String nome, String especialidade) {
 		this.crm = crm;
@@ -58,17 +61,17 @@ public class Medico {
 			return false;
 		return true;
 	}
-	
-	
+
+
 	@Override
 	public String toString() {
 		return "Medico [crm=" + crm + ", nome=" + nome + ", especialidade=" + especialidade + "]\n";
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	public String getCrm() {
 		return crm;
 	}
@@ -77,12 +80,12 @@ public class Medico {
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public String getEspecialidade() {
 		return especialidade;
 	}
-	
-	
-	
+
+
+
 
 }

@@ -27,10 +27,10 @@ public class Endereco {
 	/**
 	 * Construtor com parametro  que inicia os atributos
 	 * 
-	 * @param cep
-	 * @param rua
-	 * @param bairro
-	 * @param complemento
+	 * @param cep representa o cep
+	 * @param rua representa uma rua
+	 * @param bairro representa um bairro
+	 * @param complemento representa um complemento
 	 */
 	public Endereco(String cep, String rua, String bairro, String complemento) {
 		super();
@@ -73,7 +73,7 @@ public class Endereco {
 		return true;
 	}
 	/**
-	 * m√©todo toString que permite o objeto Ender√ßo seja mostrado na tela 
+	 * MÈtodo toString que permite o objeto EnderÁo seja mostrado na tela 
 	 */
 	@Override
 	public String toString() {

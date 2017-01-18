@@ -14,7 +14,7 @@ public class ColecaoMedicos {
 
 	/**construtor que recebe uma lista de medicos como parametro
 	 * 
-	 * @param listaMedicos
+	 * @param listaMedicos representa uma lista de medicos
 	 */
 	public ColecaoMedicos(ArrayList<Medico> listaMedicos) {
 		this.listaMedicos = listaMedicos;
@@ -22,25 +22,25 @@ public class ColecaoMedicos {
 	
 	/**
 	 * 
-	 * m√©todo que primeiro verifica se na lista j√° existe o m√©dico, caso n√£o ele adciona
-	 * @param medico
+	 * MÈtodo que primeiro verifica se na lista j· existe o mÈdico, caso n„o ele adciona
+	 * @param medico representa um mÈdico 
 	 */
 
 	public void adicionaMedico(Medico medico){
 		if(!listaMedicos.contains(medico)){
 			listaMedicos.add(medico);
-			System.out.println("*M√©dico adicionado*");
+			System.out.println("*MÈdico adicionado*");
 	    }else{
-	        System.out.println( "*Este M√©dico j√° foi adicionado*");
+	        System.out.println( "*Este MÈdico j· foi adicionado*");
 	    }
 	}
 
 	
 	/**
-	 * M√©todo que faz uma pesquisa na lista de m√©dico e mostra o que tiver 
+	 * MÈtodo que faz uma pesquisa na lista de mÈdico e mostra o que tiver 
 	 * exatamente o crm igual ao que foi passado como parametro.
 	 * 
-	 * @param crm
+	 * @param crm representa o crm do mÈdico
 	 */
 	public void pesquisaPeloCRM(String crm){
 
@@ -56,9 +56,9 @@ public class ColecaoMedicos {
 	
 	
 /**
- * M√©todo que pesquisa um m√©dico por parte do nome, ser√° mostrado todos que 
+ * MÈtodo que pesquisa um mÈdico por parte do nome, ser· mostrado todos que 
  * tiverem essa parte do nome
- * @param nome
+ * @param nome representa parte do nome do mÈdico
  */
 	public void pesquisaMedicoPorParteDoNome(String nome){
 

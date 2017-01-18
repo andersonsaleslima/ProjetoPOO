@@ -19,10 +19,10 @@ public class Consulta {
 	
 	/**
 	 * Construtor que recebe como parametro todos os atributos da classe
-	 * @param paciente
-	 * @param medico
-	 * @param data
-	 * @param hora
+	 * @param paciente representa um paciente
+	 * @param medico representa um médico
+	 * @param data representa uma data
+	 * @param hora representa uma hora
 	 */
 	public Consulta(Paciente paciente, Medico medico, LocalDate data, LocalTime hora) {
 		super();
@@ -37,7 +37,7 @@ public class Consulta {
 	 * @see java.lang.Object#toString()
 	 */
 	/**
-	 * mÃ©todo toString que permite o objeto EnderÃ§o seja mostrado na tela 
+	 * método toString que permite o objeto Endereço seja mostrado na tela 
 	 */
 	@Override
 	public String toString() {

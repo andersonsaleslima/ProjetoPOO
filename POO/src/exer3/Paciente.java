@@ -36,13 +36,13 @@ public class Paciente {
 
 	/**
 	 * 
-	 * Construtor com parametros que ser√° utlizados para alterar o valor inicial dos atributos
+	 * Construtor com parametros que ser· utlizados para alterar o valor inicial dos atributos
 	 * 
-	 * @param endereco
-	 * @param sexo
-	 * @param nome
-	 * @param data
-	 * @param documento
+	 * @param endereco representa um endereÁo do paciente
+	 * @param sexo representa o sexo do paciente
+	 * @param nome representa o nome do paciente
+	 * @param data representa a data de nascimento
+	 * @param documento representa o documento do paciente
 	 */
 	public Paciente(Endereco endereco, String sexo, String nome, LocalDate data, String documento) {
 		this.endereco = endereco;
@@ -55,7 +55,7 @@ public class Paciente {
 
 
 	/**
-	 * M√©todo que pega o nome de um paciente e o coloca no formato nome final mais iniciais.
+	 * MÈtodo que pega o nome de um paciente e o coloca no formato nome final mais iniciais.
 	 * 
 	 * @return uma string formatada
 	 */
@@ -77,10 +77,10 @@ public class Paciente {
 
 
 	/**
-	 * M√©todo que pega a data de nascimento do paciente faz um c√°lculo utilizando a data atual 
+	 * MÈtodo que pega a data de nascimento do paciente faz um c·lculo utilizando a data atual 
 	 * e retorna a idade do paciente em anos
 	 * 
-	 * @return
+	 * @return a idade do paciente
 	 */
 	public int idade(){
 
