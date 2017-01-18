@@ -86,7 +86,7 @@ public class Principal {
 					break;
 
 				case 9:
-					System.out.println("Digite parte do nome do mÃ©dico");
+					System.out.println("Digite parte do nome do médico");
 					lisMedicos.pesquisaMedicoPorParteDoNome(lerString(sc));
 					break;
 
@@ -175,7 +175,7 @@ public class Principal {
 		do{
 			r = in.nextLine();
 			if(r.length()<3){
-				System.out.print("O nome deve ter, no mÃ­nimo, 3 caracteres. Digite novamente: ");
+				System.out.print("O nome deve ter, no mínimo, 3 caracteres. Digite novamente: ");
 			}
 		}while(r.length()<3);
 		return r;

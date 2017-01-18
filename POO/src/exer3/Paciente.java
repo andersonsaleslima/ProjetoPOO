@@ -66,8 +66,9 @@ public class Paciente {
 		String nome1= new String();
 		for(int i=0;i<parts.length;i++){
 			nome=parts[parts.length-1]+", ";
-
-			nome1+=parts[i].substring(0,1)+". ";
+			 if(i<parts.length-1) {
+					nome1+=parts[i].substring(0,1)+". ";
+			 }
 
 		}
 
