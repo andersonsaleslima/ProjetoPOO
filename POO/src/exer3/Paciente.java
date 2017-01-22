@@ -64,6 +64,7 @@ public class Paciente {
 		String[] parts = this.nome.split(" ");
 		String nome = new String();
 		String nome1= new String();
+		
 		for(int i=0;i<parts.length;i++){
 			nome=parts[parts.length-1]+", ";
 			 if(i<parts.length-1) {
