@@ -1,3 +1,4 @@
+
 package exer3;
 
 
@@ -157,7 +158,7 @@ public class Principal {
 				+ "\n|   9- Pesquisar médico por parte do nome   |" 
 				+ " 10- Listar Médico pelo CRM                   |"
 				+ "\n|                                           |"
-				+ "\n|   11-Listar Consulta por Data             "
+				+ "\n|   11-Quantidade de Consultas por Data     "
 				+ "| 0- Voltar                                    "
 				+ "|                                              |"
 				+"\n|___________________________________________|"
