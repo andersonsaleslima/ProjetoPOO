@@ -97,7 +97,7 @@ public class ColecaoConsultas {
 				cont++;
 		}
 
-		System.out.println("O MÃ©dico: "+nome+" Fez: "+cont+" Consultas");
+		System.out.println("O Médico: "+nome+" Fez: "+cont+" Consultas");
 
 
 	}
