@@ -282,7 +282,7 @@ public class Principal {
 	}
 	/**
 	 * Método que retorna uma data formatada
-	 * 
+	 * hdskfhds
 	 * @return uma data no formato dd/mm/yyyy
 	 */
 	static LocalDate getData(){
