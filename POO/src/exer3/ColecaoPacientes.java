@@ -29,9 +29,9 @@ public class ColecaoPacientes {
 		if(!listaPacientes.contains(p)){
 			listaPacientes.add(p);
 			System.out.println("Paciente adicionado.");
-	    }else{
-	        System.out.println( "Este Paciente já foi adicionado");
-	    }
+		}else{
+			System.out.println( "Este Paciente já foi adicionado");
+		}
 	}
 
 	/**
@@ -50,19 +50,19 @@ public class ColecaoPacientes {
 		}
 	}
 
-	
-/**
- * 
- * Método que remove um paciente de acordo com o documento passado como parametro
- * 
- * @param documento representa o documento do paciente
- */
+
+	/**
+	 * 
+	 * Método que remove um paciente de acordo com o documento passado como parametro
+	 * 
+	 * @param documento representa o documento do paciente
+	 */
 	public void removePeloDocumento(String documento){
 
 		for (Paciente paciente : listaPacientes) {
 
 			if (paciente.getDocumento().equalsIgnoreCase(documento)){
-				
+
 				listaPacientes.remove(paciente.toString());
 				System.out.println("O paciente "+paciente.getNome()+" foi Removido");
 
@@ -76,7 +76,7 @@ public class ColecaoPacientes {
 
 	}
 
-	
+
 	/**
 	 * 
 	 * Método que faz lista quantidade de pessoas de acordo com sexo
@@ -92,16 +92,16 @@ public class ColecaoPacientes {
 			if (paciente.getSexo().equalsIgnoreCase("Feminino")||paciente.getSexo().equalsIgnoreCase("F")) {
 				fem++;
 			}
-			
+
 		}
-		
+
 		System.out.println("Quantidade Masculino: "+masc+"\nQuantidade Feminino: "+fem);
 
 
 
 	}
 
-	
+
 	/**
 	 * Método que lista os pacientes que tem endereço
 	 */
@@ -119,7 +119,7 @@ public class ColecaoPacientes {
 
 
 	}
-	
+
 	/**
 	 * Lista os pacientes que tem mais 60 anos
 	 * o método compara a idade de cada paciente 
@@ -128,15 +128,18 @@ public class ColecaoPacientes {
 	 */
 
 	public void listagemDePacientesMaioresDe60anos(){
-
 		for (Paciente paciente : listaPacientes) {
 
 			if(paciente.idade()>60){
 
 				System.out.println("Paciente com mais de 60 Anos: "+paciente.toString());
-			}else
-				System.out.println("Não há pacientes com mais de 60 anos");
+
+			}//else
+				
+			//	System.out.println("Não há pacientes com mais de 60 anos");
 		}
+
 	}
 
+		
 }

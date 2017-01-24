@@ -29,9 +29,9 @@ public class ColecaoMedicos {
 	public void adicionaMedico(Medico medico){
 		if(!listaMedicos.contains(medico)){
 			listaMedicos.add(medico);
-			System.out.println("*Médico adicionado*");
+			System.out.println("Médico adicionado");
 	    }else{
-	        System.out.println( "*Este Médico já foi adicionado*");
+	        System.out.println( "Este Médico já foi adicionado");
 	    }
 	}
 

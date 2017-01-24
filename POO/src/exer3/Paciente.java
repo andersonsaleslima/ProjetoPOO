@@ -90,7 +90,7 @@ public class Paciente {
 		LocalDate dataHj= LocalDate.now();
 
 		Period p=Period.between(this.dataNasc, dataHj);
-		System.out.println(p.getYears());
+		//System.out.println(p.getYears());
 
 
 		return p.getYears();

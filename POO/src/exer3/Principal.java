@@ -171,14 +171,14 @@ public class Principal {
 	}
 
 	public static String lerString(Scanner in){
-		System.out.print("Digite novamente (mínimo de 3 caracteres): ");
+		System.out.print("Digite novamente (mínimo de 2 caracteres): ");
 		String r;
 		do{
 			r = in.nextLine();
-			if(r.length()<3){
+			if(r.length()<2){
 				System.out.print("O nome deve ter, no mínimo, 3 caracteres. Digite novamente: ");
 			}
-		}while(r.length()<3);
+		}while(r.length()<2);
 		return r;
 
 	}
@@ -275,7 +275,7 @@ public class Principal {
 
 
 		lisMedicos.adicionaMedico(med);
-		lisPaciente.adicionarPaciente(paciente);
+		lisPaciente.adicionarPaciente(paciente);  
 		lisConsultas.adicionaConsulta(cons);
 
 
