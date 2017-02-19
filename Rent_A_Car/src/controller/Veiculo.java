@@ -48,7 +48,7 @@ public abstract class Veiculo {
 		this.precoPorHra = precoPorHra;
 	}
 
-	
+	public abstract double precoRealPorHora();
 	
 	@Override
 	public int hashCode() {
