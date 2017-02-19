@@ -19,7 +19,7 @@ public class Locacao {
 		this.veiculo = veiculo;
 		id++;
 }
-	public static int getId() {
+	public int getId() {
 		return id;
 	}
 	
