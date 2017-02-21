@@ -11,6 +11,31 @@ public class Motocicleta extends Veiculo{
 		this.estilo = estilo;
 	}
 
+	@Override
+	public double precoRealPorHora() {
+		
+		switch(this.estilo){
+		
+		case "motocross" :
+			return super.getPrecoPorHra() * 1.2;
+		case "CB" :
+			return super.getPrecoPorHra() * 1.2;
+		case "harley" :
+			return super.getPrecoPorHra() * 1.2;
+		case "XRE" :
+			return super.getPrecoPorHra() * 1.2;
+		case "Falcon" :
+			return super.getPrecoPorHra() * 1.2;
+		case "Pop" :
+			return super.getPrecoPorHra() * 1.2;
+		case "cinquentinha" :
+			return super.getPrecoPorHra() * 1.2;
+		case "comun" :
+			return super.getPrecoPorHra() * 1.2;
+		default :
+			return super.getPrecoPorHra();
+		}
+	}
 	
 	public Motocicleta(Placa placa, boolean disponibilidade, String marca, String modelo, double precoPorHra,
 			String estilo) {

@@ -26,7 +26,14 @@ public class Automovel extends Veiculo{
 		this.numeroDePassageiros = numeroDePassageiros;
 	}
 
-	
+	public double precoRealPorHora(){
+		if(qtdDePortas <= 4){
+			return super.getPrecoPorHra() * (this.qtdDePortas/4 + 0.5);
+		}
+		else{
+			return super.getPrecoPorHra() * (this.qtdDePortas/8 + 0.5);
+		}
+	}	
 	
 	@Override
 	public int hashCode() {
