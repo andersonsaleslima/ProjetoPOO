@@ -3,9 +3,10 @@ package controller;
 public class Motocicleta extends Veiculo{
 	private String estilo;
 
-	public Motocicleta(Placa placa, boolean disponibilidade, String marca, String modelo, double precoPorHra,
+	public Motocicleta(Placa placa, String marca, String modelo, double precoPorHra,
 			String estilo) {
-		super(placa, disponibilidade, marca, modelo, precoPorHra);
+		
+		super(placa, true, marca, modelo, precoPorHra);
 		this.estilo = estilo;
 	}
 	
@@ -70,8 +71,8 @@ public class Motocicleta extends Veiculo{
 
 	@Override
 	public String toString() {
-		return "Motocicleta [estilo=" + estilo + ", getPlaca()=" + getPlaca() + ", isDisponibilidade()="
-				+ isDisponibilidade() + ", getMarca()=" + getMarca() + ", getModelo()=" + getModelo()
+		return "Motocicleta [estilo=" + estilo + ", getPlaca()=" + getPlaca() + ", getDisponibilidade()="
+				+ getDisponibilidade() + ", getMarca()=" + getMarca() + ", getModelo()=" + getModelo()
 				+ ", getPrecoPorHra()=" + getPrecoPorHra() + ", toString()=" + super.toString() + ", getClass()="
 				+ getClass() + "]";
 	}

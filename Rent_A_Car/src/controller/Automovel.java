@@ -6,9 +6,11 @@ public class Automovel extends Veiculo{
 
 	
 	
-	public Automovel(Placa placa, boolean disponibilidade, String marca, String modelo, double precoPorHra,
+	public Automovel(Placa placa, String marca, String modelo, double precoPorHra,
 			int qtdDePortas, int numeroDePassageiros) {
-		super(placa, disponibilidade, marca, modelo, precoPorHra);
+		
+		super(placa, true, marca, modelo, precoPorHra);
+		
 		this.qtdDePortas = qtdDePortas;
 		this.numeroDePassageiros = numeroDePassageiros;
 	}
@@ -63,7 +65,7 @@ public class Automovel extends Veiculo{
 	@Override
 	public String toString() {
 		return "Automovel [qtdDePortas=" + qtdDePortas + ", numeroDePassageiros=" + numeroDePassageiros
-				+ ", getPlaca()=" + getPlaca() + ", isDisponibilidade()=" + isDisponibilidade() + ", getMarca()="
+				+ ", getPlaca()=" + getPlaca() + ", getDisponibilidade()=" + getDisponibilidade() + ", getMarca()="
 				+ getMarca() + ", getModelo()=" + getModelo() + ", getPrecoPorHra()=" + getPrecoPorHra()
 				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + "]";
 	}

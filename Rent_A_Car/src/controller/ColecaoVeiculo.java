@@ -6,37 +6,38 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ColecaoVeiculo {
-	private  List<Veiculo> auto = new ArrayList<Veiculo>();
+	private List<Veiculo> auto = new ArrayList<Veiculo>();
 	private List<Veiculo> moto =  new ArrayList<Veiculo>();
 	
-	public boolean adicionarAutomovel(Placa placa, boolean disponibilidade, String marca, String modelo, double precoPorHra,
+	public boolean adicionarAutomovel(Placa placa, String marca, String modelo, double precoPorHra,
 			int qtdDePortas, int numeroDePassageiros) {
-			if(placa != null){
+		
+			if((placa != null )){
 			
-				this.auto.add(new Automovel(placa, disponibilidade, marca, modelo, precoPorHra, qtdDePortas,
+				this.auto.add(new Automovel(placa, marca, modelo, precoPorHra, qtdDePortas,
 						numeroDePassageiros) );
 				return true;
 			}
 			return false;
 	}
 	
-	public boolean adicionarMoto(Placa placa, boolean disponibilidade, String marca, String modelo, double precoPorHra,
+	public boolean adicionarMotocicleta(Placa placa, String marca, String modelo, double precoPorHra,
 			String estilo) {
 			if(placa != null){
 			
-				this.moto.add(new Motocicleta(placa, disponibilidade, marca, modelo, precoPorHra, estilo) );
+				this.moto.add(new Motocicleta(placa, marca, modelo, precoPorHra, estilo) );
 				return true;
 			}
 			return false;
 	}
 
-	public Automovel pesquisaAutomovelPelaPlaca(Placa placa){
+	public Automovel pesquisaAutomovelPelaPlaca(String numerosEletras){
 		int i;
 		Automovel auto;
 	
 		for( i = 0; i < this.auto.size(); i++){
 			auto = (Automovel) this.auto.get(i);
-			if(auto.getPlaca().equals(placa)){
+			if(auto.getPlaca().getNumerosEletras().equals(numerosEletras)){
 				//System.out.println(this.paciente.get(i));
 				return auto;
 			}
@@ -44,13 +45,13 @@ public class ColecaoVeiculo {
 		return null;
 	}
 	
-	public Motocicleta pesquisaMotocicletaPelaPlaca(Placa placa){
+	public Motocicleta pesquisaMotocicletaPelaPlaca(String numerosEletras){
 		int i;
 		Motocicleta moto;
 	
 		for( i = 0; i < this.auto.size(); i++){
 			moto = (Motocicleta) this.moto.get(i);
-			if(moto.getPlaca().equals(placa)){
+			if(moto.getPlaca().getNumerosEletras().equals(numerosEletras)){
 				//System.out.println(this.paciente.get(i));
 				return moto;
 			}
@@ -59,11 +60,11 @@ public class ColecaoVeiculo {
 	}
 
 
-	public boolean removeAutomovelPelaPlaca(Placa placa){
+	public boolean removeAutomovelPelaPlaca(String numerosEletras){
 		int i;
 		for( i = 0; i < this.auto.size(); i++){
 			Automovel auto = (Automovel) this.auto.get(i);
-			if(auto.getPlaca().equals(placa)){
+			if(auto.getPlaca().getNumerosEletras().equals(numerosEletras)){
 				this.auto.remove(i);
 				return true;
 			}
@@ -71,11 +72,11 @@ public class ColecaoVeiculo {
 		return false;
 	}
 	
-	public boolean removeMotocicletaPeloPlaca(Placa placa){
+	public boolean removeMotocicletaPelaPlaca(String numerosEletras){
 		int i;
 		for( i = 0; i < this.moto.size(); i++){
 			Motocicleta moto = (Motocicleta) this.moto.get(i);
-			if(moto.getPlaca().equals(placa)){
+			if(moto.getPlaca().getNumerosEletras().equals(numerosEletras)){
 				this.moto.remove(i);
 				return true;
 			}
@@ -104,4 +105,6 @@ public class ColecaoVeiculo {
 			System.out.println(moto);
 		}
 	}
+	
+	
 }

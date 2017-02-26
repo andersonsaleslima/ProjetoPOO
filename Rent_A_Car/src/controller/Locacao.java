@@ -8,7 +8,7 @@ public class Locacao {
 	private LocalDate dataDevolucao;
 	private Pessoa pessoa;
 	private Veiculo veiculo;
-		
+	
 	
 	
 	
@@ -47,6 +47,15 @@ public class Locacao {
 	public void setVeiculo(Veiculo veiculo) {
 		this.veiculo = veiculo;
 	}
+	
+	/*Calcular preco da locacao, converter a data em segundos*/ 
+/*	public Double calculaLocacao(){
+		Double horas, precoPorHora, Total;
+		horas = this.dataEntrega - this.dataRetirada;
+		precoPorHora = this.veiculo.precoRealPorHora();
+		Total = horas * precoHora;
+	}*/
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

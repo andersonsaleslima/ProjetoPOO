@@ -23,7 +23,7 @@ public abstract class Veiculo {
 	public void setPlaca(Placa placa) {
 		this.placa = placa;
 	}
-	public boolean isDisponibilidade() {
+	public boolean getDisponibilidade() {
 		return disponibilidade;
 	}
 	public void setDisponibilidade(boolean disponibilidade) {

@@ -9,8 +9,9 @@ public class ColecaoLocacao {
 	private  List<Locacao> locacao = new ArrayList<Locacao>();
 	
 	public boolean adicionarLocacao(LocalDate dataRetirada, LocalDate dataDevolucao, Pessoa pessoa, Veiculo veiculo) {
-			if(pessoa != null){
+			if((pessoa != null)&& (veiculo.getDisponibilidade()== true)){
 			
+				veiculo.setDisponibilidade(false);
 				this.locacao.add(new Locacao(dataRetirada, dataDevolucao, pessoa, veiculo) );
 				return true;
 			}
@@ -36,6 +37,7 @@ public class ColecaoLocacao {
 		for( i = 0; i < this.locacao.size(); i++){
 			Locacao locacao = this.locacao.get(i);
 			if(locacao.getId() == id ){
+				locacao.getVeiculo().setDisponibilidade(true);
 				this.locacao.remove(i);
 				return true;
 			}
@@ -43,6 +45,7 @@ public class ColecaoLocacao {
 		return false;
 	}
 	
+
 	public void listagemLocacao(){
 		Locacao locacao;
 		
@@ -51,5 +54,18 @@ public class ColecaoLocacao {
 			locacao = this.locacao.get(i);
 			System.out.println(locacao);
 		}
+	}
+	
+	public boolean fecharLocacaoPeloId(int id, LocalDate dataDevolucao){
+		int i;
+		for( i = 0; i < this.locacao.size(); i++){
+			Locacao locacao = this.locacao.get(i);
+			if(locacao.getId() == id ){
+				locacao.setDataRetirada(dataDevolucao);
+				locacao.getVeiculo().setDisponibilidade(true);
+				return true;
+			}
+		}
+		return false;
 	}
 }
