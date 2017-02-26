@@ -64,7 +64,7 @@ public class ColecaoPessoa {
 		for( i = 0; i < this.func.size(); i++){
 			Funcionario func = (Funcionario) this.func.get(i);
 			if(func.getCpf().equals(cpf)){
-				func.getCpf();
+				this.func.remove(i);
 				return true;
 			}
 		}
@@ -76,11 +76,30 @@ public class ColecaoPessoa {
 		for( i = 0; i < this.client.size(); i++){
 			Cliente client = (Cliente) this.client.get(i);
 			if(client.getCpf().equals(cpf)){
-				client.getCpf();
+				this.client.remove(i);
 				return true;
 			}
 		}
 		return false;
 	}
 
+	public void listagemCliente(){
+		Cliente client ;
+		
+		System.out.println();
+		for(int i = 0; i< this.client.size(); i++){
+			client = (Cliente) this.client.get(i);
+			System.out.println(client);
+		}
+	}
+	
+	public void listagemFuncionario(){
+		Funcionario func ;
+		
+		System.out.println();
+		for(int i = 0; i< this.func.size(); i++){
+			func = (Funcionario) this.func.get(i);
+			System.out.println(func);
+		}
+	}
 }

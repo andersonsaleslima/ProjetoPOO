@@ -3,6 +3,12 @@ package controller;
 public class Motocicleta extends Veiculo{
 	private String estilo;
 
+	public Motocicleta(Placa placa, boolean disponibilidade, String marca, String modelo, double precoPorHra,
+			String estilo) {
+		super(placa, disponibilidade, marca, modelo, precoPorHra);
+		this.estilo = estilo;
+	}
+	
 	public String getEstilo() {
 		return estilo;
 	}
@@ -35,12 +41,6 @@ public class Motocicleta extends Veiculo{
 		default :
 			return super.getPrecoPorHra();
 		}
-	}
-	
-	public Motocicleta(Placa placa, boolean disponibilidade, String marca, String modelo, double precoPorHra,
-			String estilo) {
-		super(placa, disponibilidade, marca, modelo, precoPorHra);
-		this.estilo = estilo;
 	}
 
 	@Override
