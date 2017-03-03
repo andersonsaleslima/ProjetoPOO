@@ -6,7 +6,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ColecaoLocacao {
-	private  List<Locacao> locacao = new ArrayList<Locacao>();
+	private  List<Locacao> locacao;
+	
+	public ColecaoLocacao(){
+		this.locacao = new ArrayList<Locacao>();
+	}
 	
 	public boolean adicionarLocacao(LocalDate dataRetirada, LocalDate dataDevolucao, Pessoa pessoa, Veiculo veiculo) {
 			if((pessoa != null)&& (veiculo.getDisponibilidade()== true)){

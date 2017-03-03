@@ -7,7 +7,11 @@ import java.util.ArrayList;
 
 
 public class ColecaoPessoa {
-	private  List<Pessoa> pessoa = new ArrayList<Pessoa>();
+	private  List<Pessoa> pessoa;
+	
+	public ColecaoPessoa(){
+		this.pessoa = new ArrayList<Pessoa>();
+	}
 	
 	public boolean adicionarPessoa(Pessoa pessoa) {
 			if(pessoa != null){

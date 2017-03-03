@@ -9,6 +9,9 @@ public class Endereco {
 	private int numero;
 	
 	
+	public Endereco() {
+		super();
+	}
 	
 	public Endereco(String estado, String cidade, String bairro, String cep, String rua, int numero) {
 		super();

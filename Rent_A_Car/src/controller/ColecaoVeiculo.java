@@ -6,7 +6,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ColecaoVeiculo {
-	private List<Veiculo> veiculo = new ArrayList<Veiculo>();
+	private List<Veiculo> veiculo;
+	
+	public ColecaoVeiculo(){
+		this.veiculo = new ArrayList<Veiculo>();
+	}
 	
 	public boolean adicionarAutomovel(Veiculo veiculo) {
 		
