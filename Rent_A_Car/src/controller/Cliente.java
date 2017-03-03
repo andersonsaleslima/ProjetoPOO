@@ -13,6 +13,10 @@ public class Cliente extends Pessoa {
 		this.categoriaCnh = categoriaCnh;
 	}
 
+	public Cliente() {
+		super();
+	}
+
 	public String getCnh() {
 		return cnh;
 	}

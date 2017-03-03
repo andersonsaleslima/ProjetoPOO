@@ -21,6 +21,9 @@ public abstract class Pessoa {
 		this.senha = senha;
 		this.dataNascimento = dataNascimento;
 	}
+	public Pessoa() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getNome() {
 		return nome;
 	}
