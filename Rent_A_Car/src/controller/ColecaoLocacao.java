@@ -16,7 +16,6 @@ public class ColecaoLocacao {
 		locacoes.add(locacao);
 	}
 
-	@SuppressWarnings("static-access")
 	public void remoceLocacao(int id){
 
 		for (Locacao locacao : locacoes) {

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Controller implements Icontroller{
 	private ColecaoPessoa cp=new ColecaoPessoa();
-	private	ColecaoLocacao cl;
-	private	ColecaoVeiculo cv;
+	private	ColecaoLocacao cl=new ColecaoLocacao();
+	private	ColecaoVeiculo cv=new ColecaoVeiculo();
 
 	@Override
 	public void addPessoa(Pessoa p) {
