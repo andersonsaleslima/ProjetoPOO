@@ -16,13 +16,16 @@ public class Principal {
 
 		c.setCnh("123");
 		c.setNome("Fabiano");
+		c.setCpf("000");
 
 		f.setCargo("gerente");
 		f.setMatricula("321");
+		f.setCpf("001");
 
 
 		c1.setCnh("111");
-		c1.setNome("Fabiano");
+		c1.setNome("Roberto");
+		c1.setCpf("011");
 
 
 		ic.addPessoa(f);
@@ -38,7 +41,11 @@ public class Principal {
 			}
 			
 		}
-		
+		System.out.println("Removendo..");
+		ic.removerPessoa("123");
+		ic.removerPessoa("000");
+		System.out.println(ic.listarPessoa().toString());
+
 		
 		/*
 		

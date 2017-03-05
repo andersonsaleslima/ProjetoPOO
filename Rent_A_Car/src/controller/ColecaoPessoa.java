@@ -39,6 +39,19 @@ public class ColecaoPessoa {
 		return clientes;
 
 		} 
+	
+	public boolean removerPessoa(String cpf) {
+		
+		for (Pessoa pessoa : pessoas) {
+			if(pessoa.getCpf().equals(cpf)){
+				pessoas.remove(pessoa);
+			}
+		}
+		
+		
+		return true;
+		
+	}
 		
 	
 	

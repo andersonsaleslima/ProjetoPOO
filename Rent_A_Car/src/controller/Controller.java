@@ -26,4 +26,11 @@ public class Controller implements Icontroller{
 
 	}
 
+	@Override
+	public boolean removerPessoa(String cpf) {
+		
+		
+		return cp.removerPessoa(cpf);
+	}
+
 }

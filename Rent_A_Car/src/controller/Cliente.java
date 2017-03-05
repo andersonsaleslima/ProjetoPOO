@@ -66,10 +66,10 @@ public class Cliente extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Cliente [cnh=" + cnh + ", categoriaCnh=" + categoriaCnh + ", getNome()=" + getNome()
-				+ ", getEndereco()=" + getEndereco() + ", getCpf()=" + getCpf() + ", getLogin()=" + getLogin()
-				+ ", getSenha()=" + getSenha() + ", getDataNascimento()=" + getDataNascimento() + ", toString()="
-				+ super.toString() + ", getClass()=" + getClass() + "]";
+		return "Cliente [cnh=" + cnh + ",\n categoriaCnh=" + categoriaCnh + ",\n getNome()=" + getNome()
+				+ ",\n getEndereco()=" + getEndereco() + ",\n getCpf()=" + getCpf() + ",\n getLogin()=" + getLogin()
+				+ ",\n getSenha()=" + getSenha() + ",\n getDataNascimento()=" + getDataNascimento() + ",\n toString()="
+				+ super.toString() + ",\n getClass()=" + getClass() + "]\n";
 	}
 	
 
