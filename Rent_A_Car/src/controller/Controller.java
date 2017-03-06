@@ -33,4 +33,76 @@ public class Controller implements Icontroller{
 		return cp.removerPessoa(cpf);
 	}
 
+	@Override
+	public ArrayList<Funcionario> listarFuncionario() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addVeiculo(Veiculo v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ArrayList<Veiculo> listarVeiculo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Veiculo listarVeiculo(String placa) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean removerVeiculo(String placa) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void realizarLocacao(Locacao l) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ArrayList<Locacao> listarLocacoes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Locacao> listarLocacao(Pessoa p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Locacao> listarLocacao(Veiculo v) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Locacao listarLocacao(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean removerLocacao(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ArrayList<Veiculo> listarVeiculoDisponivel(String placa) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

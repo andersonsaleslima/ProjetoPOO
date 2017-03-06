@@ -8,53 +8,56 @@ public class ColecaoPessoa {
 	public ColecaoPessoa(ArrayList<Pessoa> pessoas) {
 		this.pessoas = pessoas;
 	}
-	
+
 	public ColecaoPessoa() {
-		
+
 		this.pessoas = new ArrayList<Pessoa>();
 	}
-	
+
 	public void addPessoa(Pessoa p){
-		pessoas.add(p);
+		if(!pessoas.contains(p)){
+			pessoas.add(p);
+		}
+
 	}
-	
+
 	public ArrayList<Pessoa> listarPessoa(){
-		
-			
+
+		if(!pessoas.isEmpty()){
 			return pessoas;
-		
-	
+		}
+		return null;
 	}
-	
+
 	public ArrayList<Cliente> listarClientes(){
 		ArrayList<Cliente> clientes=new ArrayList<Cliente>();
 
 		for (Pessoa pessoa : pessoas) {
-			
+
 			if(pessoa instanceof Cliente){
 				clientes.add((Cliente) pessoa);
-								
+
 			}
-			}
+		}
 		return clientes;
 
-		} 
-	
+	} 
+
 	public boolean removerPessoa(String cpf) {
-		
+
 		for (Pessoa pessoa : pessoas) {
 			if(pessoa.getCpf().equals(cpf)){
 				pessoas.remove(pessoa);
 			}
 		}
-		
-		
+
+
 		return true;
-		
+
 	}
-		
-	
-	
-	
+
+
+
+
 
 }
