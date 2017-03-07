@@ -13,7 +13,7 @@ public interface Icontroller {
 	public void addVeiculo(Veiculo v);
 	public ArrayList<Veiculo> listarVeiculo();
 	public Veiculo listarVeiculo(String placa);
-	public ArrayList<Veiculo> listarVeiculoDisponivel(String placa);
+	public ArrayList<Veiculo> listarVeiculosDisponivel(String placa);
 	public boolean removerVeiculo(String placa);
 	
 	public void realizarLocacao(Locacao l);
