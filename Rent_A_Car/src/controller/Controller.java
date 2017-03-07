@@ -95,7 +95,6 @@ public class Controller implements Icontroller{
 
 	@Override
 	public boolean removerLocacao(int id) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
