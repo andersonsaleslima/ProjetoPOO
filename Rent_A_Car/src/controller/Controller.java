@@ -99,7 +99,7 @@ public class Controller implements Icontroller{
 	}
 
 	@Override
-	public ArrayList<Veiculo> listarVeiculoDisponivel(String placa) {
+	public ArrayList<Veiculo> listarVeiculosDisponivel(String placa) {
 		return null;
 	}
 
