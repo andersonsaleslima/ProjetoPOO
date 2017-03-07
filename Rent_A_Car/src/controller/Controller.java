@@ -101,7 +101,6 @@ public class Controller implements Icontroller{
 
 	@Override
 	public ArrayList<Veiculo> listarVeiculoDisponivel(String placa) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
